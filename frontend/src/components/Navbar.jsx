@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const navBarList = [
-    { id: 1, name: "TV Shows", destination: "/" },
-    { id: 2, name: "Books", destination: "/" },
-    { id: 3, name: "Movies", destination: "/" },
-    { id: 4, name: "Anime", destination: "/" },
+    { id: 1, name: "TV Shows", destination: "/tvshow" },
+    { id: 2, name: "Books", destination: "/book" },
+    { id: 3, name: "Movies", destination: "/movie" },
+    { id: 4, name: "Anime", destination: "/anime" },
   ];
 
   return (
