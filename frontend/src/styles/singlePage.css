@@ -1,0 +1,30 @@
+.single-media-container {
+  width: auto;
+  background-color: #2b2a2a;
+  color: rgb(255, 255, 255);
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-media-container .left-side, .right-side {
+  flex: 1;
+}
+
+
+.single-media-container .left-side .icon {
+  height: auto;
+}
+
+.single-media-container .right-side h1 {
+  font-weight: bold;
+  color: rgb(71, 178, 255);
+  font-size: 1.2rem;
+}
+
+.single-media-container .right-side p {
+  font-size: 1rem;
+}
+

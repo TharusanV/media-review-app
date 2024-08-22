@@ -1,7 +1,7 @@
 import MediaGrid from "../components/MediaGrid";
 import { useEffect, useState } from 'react';
 
-const BooksPage = ({p_fetchMediaMethod, p_createMedia, p_updateMedia, p_deleteMedia}) => {
+const BooksPage = ({p_fetchMediaMethod}) => {
   const [media, setMedia] = useState([]);
 
   useEffect(() => {

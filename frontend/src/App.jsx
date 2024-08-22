@@ -29,6 +29,17 @@ function App() {
     }
   };
 
+  const fetchMediaByID = async (id) => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}${id}/`);
+        return response.data;
+    } 
+    catch (error) {
+        console.error(`Error fetching media by ID ${id}:`, error);
+        throw error;
+    }
+  };
+
   const fetchMediaByType = async (mediaType) => {
     try {
         const response = await axios.get(API_BASE_URL, {
@@ -78,21 +89,21 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<MainLayout/>}>
+      <Route path='/' element={<MainLayout p_createMedia={createMedia} p_updateMedia={updateMedia} p_deleteMedia={deleteMedia}/>}>
         <Route index element={<HomePage p_allMedia={allMedia}/>} />
         <Route path='*' element={<UnknownPage/>} />
 
-        <Route path="/tvshow" element={<TVShowPage p_fetchMediaMethod={fetchMediaByType} p_createMedia={createMedia} p_updateMedia={updateMedia} p_deleteMedia={deleteMedia} />} />
-        <Route path="/tvshow/:id" element={<SingleMediaPage  />} />
+        <Route path="/tvshow" element={<TVShowPage p_fetchMediaMethod={fetchMediaByType}  />} />
+        <Route path="/tvshow/:id" element={<SingleMediaPage  p_fetchMediaByID={fetchMediaByID }/>} />
        
-        <Route path="/movie" element={<MoviesPage p_fetchMediaMethod={fetchMediaByType} p_createMedia={createMedia} p_updateMedia={updateMedia} p_deleteMedia={deleteMedia} />} />
-        <Route path="/movie/:id" element={<SingleMediaPage />} />
+        <Route path="/movie" element={<MoviesPage p_fetchMediaMethod={fetchMediaByType}  />} />
+        <Route path="/movie/:id" element={<SingleMediaPage p_fetchMediaByID={fetchMediaByID }/>} />
 
-        <Route path="/anime" element={<AnimePage p_fetchMediaMethod={fetchMediaByType} p_createMedia={createMedia} p_updateMedia={updateMedia} p_deleteMedia={deleteMedia} />} />
-        <Route path="/anime/:id" element={<SingleMediaPage  />} />
+        <Route path="/anime" element={<AnimePage p_fetchMediaMethod={fetchMediaByType}  />} />
+        <Route path="/anime/:id" element={<SingleMediaPage p_fetchMediaByID={fetchMediaByID } />} />
 
-        <Route path="/book" element={<BooksPage p_fetchMediaMethod={fetchMediaByType} p_createMedia={createMedia} p_updateMedia={updateMedia} p_deleteMedia={deleteMedia} />} />
-        <Route path="/book/:id" element={<SingleMediaPage />} />
+        <Route path="/book" element={<BooksPage p_fetchMediaMethod={fetchMediaByType}  />} />
+        <Route path="/book/:id" element={<SingleMediaPage p_fetchMediaByID={fetchMediaByID }/>} />
       </Route>
     )
   );
