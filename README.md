@@ -1,8 +1,7 @@
-# ReactJS/Djano - Media Review/Recording App
+# ReactJS/Django - Media Review/Recording App
 
 ### Description :
-Whenever I watch or read something I like to jot down my opinion of it on a notepad so that later down the line I can see how my opinion on a piece of media changes.
-A gap I found in recording media platforms is that they target specific types of media not all of them. Along with the that the interfaces of some of these web applications aren't that appealing. YourMedia is a full stack media recording system creating using ReactJS and Django with the goal of providing an all in one personal review platform to track all my watched/read media. For each piece of media its title, genre, my rating of it, image and my review is stored in the backend then called using Axios. With Axios the application is also able to update and delete posts.
+Whenever I watch or read something, I like to jot down my thoughts in a notepad. This helps me track how my opinions on various pieces of media evolve over time. However, I’ve noticed a gap in existing media recording platforms—they tend to focus on specific types of media rather than offering a comprehensive solution. Additionally, many of these platforms lack an intuitive and visually appealing interface. To address this, I developed YourMedia, a full-stack media tracking system built with ReactJS and Django. The platform serves as an all-in-one personal review hub, allowing me to log and manage all the media I consume, whether it's books, movies, or TV shows. For each entry, the system stores the title, genre, rating, image, and my personal review in the backend. Axios is used to retrieve, add, update, and delete entries, ensuring a smooth and dynamic user experience.
 
 ### Technologies used :
     - ReactJS 
