@@ -12,7 +12,10 @@ const TVShowPage = ({p_fetchMediaMethod}) => {
   
   return (
     <div style={{marginTop: "1rem"}}>
-      <MediaGrid p_mediaList={media}/>
+      <div className="home-container">
+        <h1>Your TV Shows</h1>
+        <MediaGrid p_mediaList={media}/>
+      </div>
     </div>
   )
 }

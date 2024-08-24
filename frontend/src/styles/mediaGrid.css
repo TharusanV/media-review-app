@@ -1,22 +1,41 @@
-/* Product container */
+.home-container {
+  margin: 0 auto;
+  width: 1000px;
+  margin-bottom: 5px;
+}
+
+
+.home-container h1 { 
+  color: white;
+  margin-bottom: 0.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
 .media-grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
-  width: 90%; 
-  height: fit-content; 
-  gap: 16px; 
+  height: fit-content;  
+  gap: 10px;
   row-gap: 30px;
   color: white;
-  margin: 0 auto;
 }
 
 .media-item img{
+  height: 257px;
   object-fit: cover;
+}
+
+.media-item p{
+  word-wrap: break-word;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 1280px) {
   .media-grid-container{
-    width: 90%;
+    
   }
 }
 
